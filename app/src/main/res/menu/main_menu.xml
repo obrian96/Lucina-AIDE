@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/item"
+        android:title="Refresh Web"/>
+	
+	<item
+		android:id="@+id/item1"
+		android:title="Repeat Last Request"/>
+	
+	<item
+		android:id="@+id/item2"
+		android:title="Load Developer Tools DOM"/>
+	
+	<item
+		android:id="@+id/item3"
+		android:title="Settings"/>
+    
+</menu>
+

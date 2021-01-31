@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/logcatView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true"
+	app:elevation="4dp"
+	app:behavior_hideable="false"
+	app:behavior_peekHeight="25dp"
+	android:clipToPadding="false"
+	android:orientation="vertical"
+	android:background="#333"
+	app:layout_behavior="@string/bottom_sheet_behavior">
+
+	<View
+		android:id="@+id/logcatBar"
+		android:layout_width="70dp"
+		android:layout_centerHorizontal="true"
+		android:layout_height="5dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginStart="20dp"
+		android:layout_marginEnd="20dp"
+		android:layout_marginBottom="10dp"
+		android:layout_alignParentTop="true"
+		android:background="#212121" />
+
+	<View
+		android:id="@+id/logcatBarDiv"
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:layout_below="@+id/logcatBar"
+		android:background="#222" />
+
+	<TextView
+		android:id="@+id/logcatLabel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Logcat"
+		android:textStyle="bold"
+		android:textSize="19sp"
+		android:gravity="center"
+		android:includeFontPadding="false"
+		android:paddingTop="4dp"
+		android:paddingBottom="0dp"
+		android:typeface="serif"
+		android:layout_below="@+id/logcatBarDiv" />
+
+	<View
+		android:id="@+id/logcatLabelDiv"
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:visibility="invisible"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@+id/logcatLabel"
+		android:background="#051433" />
+
+	<!--<androidx.viewpager.widget.ViewPager
+	android:id="@+id/viewpager"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_below="@+id/logcatLabelDiv">
+
+	<com.google.android.material.tabs.TabLayout
+	android:id="@+id/tab_layout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" />
+
+	</androidx.viewpager.widget.ViewPager>-->
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:clipToPadding="false"
+		android:scrollbars="vertical"
+		android:layout_marginTop="5dp"
+		android:paddingBottom="25dp"
+		android:fillViewport="true"
+		android:layout_below="@+id/logcatLabelDiv"
+		android:overScrollMode="never">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/logcat"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/colorDarkBody"
+				android:autoLink="all"
+				android:linksClickable="true"
+				android:padding="10dp"
+				android:textIsSelectable="true"
+				android:scrollbars="vertical" />
+
+		</LinearLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+
